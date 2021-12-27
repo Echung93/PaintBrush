@@ -111,5 +111,17 @@
   <ItemGroup>
     <Resource Include="ImageIcon\Paint.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImageIcon\Triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImageIcon\Square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImageIcon\Eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImageIcon\Select.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
