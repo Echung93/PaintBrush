@@ -8,20 +8,28 @@
         Title="그림판" Height="500" Width="1100">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="11*"/>
-            <ColumnDefinition Width="11*"/>
-            <ColumnDefinition Width="11*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="400*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="440*"/>
         </Grid.RowDefinitions>
-        <Canvas Name="canvas" Background="White" Grid.ColumnSpan="8" Grid.RowSpan="2" MouseLeftButtonDown="canvas_MouseLeftButtonDown" MouseMove="canvas_MouseMove"  MouseUp="canvas_MouseUp" />
+        <Canvas Name="canvas" Background="White" Grid.ColumnSpan="16" Grid.Row="1" MouseLeftButtonDown="canvas_MouseLeftButtonDown" MouseMove="canvas_MouseMove"  MouseUp="canvas_MouseUp" Margin="0,6,0,0" />
 
         <!-- 첫번째칸 -->
         <Button  Name="Line" Background="LightGray" HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="0" Grid.Row="0" Margin="5,3,0,0" VerticalAlignment="Top" Click="btn_Click">
@@ -36,7 +44,7 @@
                 <TextBlock Text="연필" Height="20" Width="36" TextAlignment="Center"/>
             </StackPanel>
         </Button>
-        <TextBlock TextWrapping="Wrap" Text="브러시" FontSize="8" Margin="30,43,30,430" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" TextAlignment="Center" />
+        <TextBlock TextWrapping="Wrap" Text="브러시" FontSize="8" Margin="30,43,30,0" Grid.Column="0" Grid.Row="0" TextAlignment="Center" />
 
         <!-- 두번째칸 -->
         <Button Name="Paint" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="1" Grid.Row="0" Margin="5,3,0,0" VerticalAlignment="Top" Click="btn_Click" >
@@ -51,37 +59,71 @@
                 <TextBlock Text="스포이드" Height="16" Width="36" FontSize="9" TextAlignment="Center"/>
             </StackPanel>
         </Button>
-        <TextBlock TextWrapping="Wrap" Text="도구" FontSize="8" Margin="30,43,30,430" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" TextAlignment="Center" />
+        <TextBlock TextWrapping="Wrap" Text="도구" FontSize="8" Margin="30,43,30,0" Grid.Column="1" Grid.Row="0" TextAlignment="Center" />
 
         <!-- 세번번째칸 -->
-        <Button Name="Square" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="2" Grid.Row="0" Margin="5,3,0,0" VerticalAlignment="Top" Click="btn_Click">
+        <Button Name="Square" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="2" Grid.Row="0" Margin="3,3,0,0" VerticalAlignment="Top" Click="btn_Click">
             <StackPanel>
                 <Image Name="SquareImage" Source="/ImageIcon/Square.png" Height="20" Width="36"/>
                 <TextBlock Text="네모" Height="20" Width="36" TextAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button Name="Triangle" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="2" Grid.Row="0" Margin="55,3,0,0" VerticalAlignment="Top" Click="btn_Click">
+        <Button Name="Triangle" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="2" Grid.Row="0" Margin="46,3,0,0" VerticalAlignment="Top" Click="btn_Click">
             <StackPanel>
                 <Image Name="TriangleImage" Source="/ImageIcon/Triangle.png" Height="20" Width="36"/>
                 <TextBlock Text="삼각형" Height="16" Width="36" TextAlignment="Center"/>
             </StackPanel>
         </Button>
-        <TextBlock TextWrapping="Wrap" Text="도형" FontSize="8" Margin="30,43,30,430" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" TextAlignment="Center" />
+        <Button Name="Circle" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="2" Grid.Row="0" Margin="90,3,0,0" VerticalAlignment="Top" Click="btn_Click" Grid.ColumnSpan="2">
+            <StackPanel>
+                <Image Name="CircleleImage" Source="/ImageIcon/Circle.png" Height="20" Width="36"/>
+                <TextBlock Text="원" Height="16" Width="36" TextAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <TextBlock TextWrapping="Wrap" Text="도형" FontSize="8" Margin="30,43,30,0" Grid.Column="2" Grid.Row="0" TextAlignment="Center" />
 
         <!-- 네번째칸 -->
-        <Button Name="Eraser" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="3" Grid.Row="0" Margin="5,3,0,0" VerticalAlignment="Top" Click="btn_Click" Grid.ColumnSpan="2">
+        <Button Name="Eraser" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="3" Grid.Row="0" Margin="5,3,0,0" VerticalAlignment="Top" Click="btn_Click">
             <StackPanel>
                 <Image Name="EraserImage" Source="/ImageIcon/Eraser.png" Height="20" Width="36"/>
                 <TextBlock Text="지우개" Height="20" Width="36" TextAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button Name="Select" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="4" Grid.Row="0" Margin="45,3,0,0" VerticalAlignment="Top" Click="btn_Click">
+        <Button Name="Select" Background="LightGray"  HorizontalAlignment="Left" Height="40" Width="40" Grid.Column="3" Grid.Row="0" Margin="55,3,0,0" VerticalAlignment="Top" Click="btn_Click">
             <StackPanel>
                 <Image Name="SelectImage" Source="/ImageIcon/Select.png" Height="20" Width="36"/>
                 <TextBlock Text="선택" Height="16" Width="36" TextAlignment="Center"/>
             </StackPanel>
         </Button>
-        <TextBlock TextWrapping="Wrap" Text="도구" FontSize="8" Margin="20,43,30,430" Grid.Column="4" Grid.Row="0" Grid.RowSpan="2" TextAlignment="Center" />
+        <TextBlock TextWrapping="Wrap" Text="도구" FontSize="8" Margin="30,43,30,0" Grid.Column="3" Grid.Row="0" TextAlignment="Center" />
+
+
+        <!-- 다섯번째칸 -->
+        <Slider Grid.Column="4" Grid.Row="0" Margin="5,30,5,10" VerticalAlignment="Center" />
+        <TextBox TextWrapping="Wrap" Text="TextBox" Grid.Column="4" Grid.Row="0" Margin="5,4,20,30"  VerticalAlignment="Center" />
+
+        <!-- 여섯번째칸 -->
+
+
+        <!-- 일곱번째칸 -->
+        <TextBlock TextWrapping="Wrap" Text="색" FontSize="8" Grid.Column="6" VerticalAlignment="Center"  HorizontalAlignment="Center" TextAlignment="Center" RenderTransformOrigin="-5.125,0.003" Height="10" Width="8" />
+
+        <!-- 여덟번째칸 -->
+        <Button Name="PencilColor" Background="Black" Grid.Column="7"  HorizontalAlignment="Center" Height="30" Margin="0,9,0,0" VerticalAlignment="Top" Width="40" Click="Color_Click"/>
+        <TextBlock TextWrapping="Wrap" Text="글자색" FontSize="8" Margin="10,40,10,0" Grid.Column="7"  RenderTransformOrigin="-5.125,0.003" Width="28" Height="11" />
+
+        <!-- 아홉번째칸 -->
+        <Button x:Name="PaintColor" Background="White" Grid.Column="8"  HorizontalAlignment="Center" Height="30" Margin="0,9,0,0" VerticalAlignment="Top" Width="40" Click="Color_Click"/>
+        <TextBlock TextWrapping="Wrap" Text="페인트색" FontSize="8" Margin="8,40,8,0" Grid.Column="8"  RenderTransformOrigin="-5.125,0.003" Height="11" />
+
+        <!-- 열번째칸 색깔 -->
+        <Button Name="WhiteColor" Background="White" Grid.Column="9"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="1,1,1,1" Click="Color_Click"/>
+        <Button Name="RedColor" Background="Red" Grid.Column="10"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="5,5,5,5" Click="Color_Click" />
+        <Button Name="BlueColor" Background="Blue" Grid.Column="11"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="5,5,5,5" Click="Color_Click"/>
+        <Button Name="YellowColor" Background="Yellow" Grid.Column="12"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="5,5,5,5" Click="Color_Click" />
+        <Button Name="GreenColor" Background="Green" Grid.Column="13" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="5,5,5,5" Click="Color_Click"/>
+        <Button Name="PurpleColor" Background="Purple" Grid.Column="14"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="5,5,5,5" Click="Color_Click"/>
+        <Button Name="BlackColor" Background="Black" Grid.Column="15"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="5,5,5,5" Click="Color_Click"/>
 
     </Grid>
 </Window>
